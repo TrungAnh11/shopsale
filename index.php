@@ -4,6 +4,7 @@
   if(isset($_POST['login'])){
     $uname = $_POST['umname'];
     $psw = $_POST['psw'];
+    var_dump($uname);
     $sql = "SELECT * FROM account WHERE _username = '$uname' AND _password = '$psw'";
     $query = pg_query($dbconn4,$sql);
     $row = pg_num_rows($query);
