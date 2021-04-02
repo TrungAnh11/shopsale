@@ -1,5 +1,9 @@
 <?php 
- 
+  $conn_string = "host=ec2-54-235-108-217.compute-1.amazonaws.com port=5432 dbname=d3r0rcf2je8t76 user=bmqbbyzbyplbgb password=a18deed93ee2e22811f1743dd1db9d7d5b9d568f8bfaaa97ad1265cf72eba0a0";
+  $dbconn4 = pg_connect($conn_string);
+  if($dbconn4){
+    echo "OKe";
+  }
 ?>
 <!DOCTYPE html>
 <html>
