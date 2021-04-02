@@ -1,22 +1,21 @@
 <?php 
-$conn_string = "host=ec2-54-235-108-217.compute-1.amazonaws.com port=5432 dbname=d3r0rcf2je8t76 user=bmqbbyzbyplbgb password=a18deed93ee2e22811f1743dd1db9d7d5b9d568f8bfaaa97ad1265cf72eba0a0";
-$dbconn4 = pg_connect($conn_string);
-//connect to a database named "test" on the host "sheep" with a username and passwor
+ $conn_string = "host=ec2-54-235-108-217.compute-1.amazonaws.com port=5432 dbname=d3r0rcf2je8t76 user=bmqbbyzbyplbgb password=a18deed93ee2e22811f1743dd1db9d7d5b9d568f8bfaaa97ad1265cf72eba0a0";
+ $dbconn4 = pg_connect($conn_string);
+ //connect to a database named "test" on the host "sheep" with a username and passwor
 
-if(isset($_POST('login')){
- $uname = $_POST['uname'];
- $psw = $_POST['psw'];
- $sql = "SELECT * FROM account WHERE _username='$uname' AND _password='$psw'";
- $query = pg_query($dbconn4,$sql);
- $row = pg_num_rows($query);
- if($row > 0){
-  echo " Login Successfully";
- }
- else{
-  echo "Thong tin dang nhap sai, vui long nhap lai";
- }
-}
-    
+ if(isset($_POST['login']){
+   $uname = $_POST['uname'];
+   $psw = $_POST['psw'];
+   $sql = "SELECT * FROM account WHERE _username='$uname' AND _password='$psw'";
+   $query = pg_query($dbconn4,$sql);
+   $row = pg_num_rows($query);
+   if($row > 0){
+    echo " Login Successfully";
+   }
+   else{
+    echo "Thong tin dang nhap sai, vui long nhap lai";
+   }
+  }   
 ?>
 <!DOCTYPE html>
 <html>
