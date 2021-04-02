@@ -11,7 +11,7 @@
       echo "Login Successfully <3";
     }
     else{
-      echo "Incorrect Data, please try again !!!"
+      echo "Incorrect Data, please try again !!!";
     }
   }
 ?>
