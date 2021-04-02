@@ -4,7 +4,6 @@
   if(isset($_POST['login'])){
     $uname = $_POST['uname'];
     $psw = $_POST['psw'];
-    var_dump($uname);
     $sql = "SELECT * FROM account WHERE _username = '$uname' AND _password = '$psw'";
     $query = pg_query($dbconn4,$sql);
     $row = pg_num_rows($query);
@@ -93,7 +92,7 @@ span.psw {
     width: 100%;
   }
 }
-</style>>
+</style>
 <body>
 <form method="post">
   <div class="imgcontainer">
